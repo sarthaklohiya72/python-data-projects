@@ -1,2 +1,7 @@
 *.csv
 .env
+crewai-env/
+venv/
+env/
+*.so
+*.dylib
