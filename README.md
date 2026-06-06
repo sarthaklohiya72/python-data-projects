@@ -125,6 +125,12 @@ Now takes 2 minutes. **100 minutes saved per week.**
 
 ---
 
+### 11. Rajasthan Manufacturing Analytics Dashboard (Tableau)
+URL:-
+https://public.tableau.com/app/profile/sarthak.lohiya/viz/Rajasthan-Manufacturing-Dashboard/Dashboard1?publish=yes
+
+---
+
 ## Database
 
 **`rajasthan_business_db`** — MySQL database with 8 tables:
