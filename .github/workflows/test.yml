@@ -1,0 +1,33 @@
+name: Test ML Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install pandas scikit-learn fastapi uvicorn
+
+    - name: Run ML pipeline
+      run: |
+        python mlops_pipeline.py
+
+    - name: Check model exists
+      run: |
+        test -f models/churn_model.pkl && echo "Model saved successfully"
+
+    - name: Check metrics
+      run: |
+        cat metrics/metrics.json

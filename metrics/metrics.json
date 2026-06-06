@@ -1,0 +1,10 @@
+{
+  "accuracy": 1.0,
+  "model": "RandomForest",
+  "n_estimators": 100,
+  "features": [
+    "month",
+    "quantity",
+    "buyer_encoded"
+  ]
+}
