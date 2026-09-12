@@ -131,6 +131,44 @@ https://public.tableau.com/app/profile/sarthak.lohiya/viz/Rajasthan-Manufacturin
 
 ---
 
+### 12. Inventory Reorder Agent
+**File:** `inventory_reorder_agent.py`  
+Reads `inventory.csv`, finds products below their reorder level, and uses Groq to draft a
+supplier reorder email for each one. Drafts are saved to `reorder_emails.txt`.
+
+---
+
+### 13. Customer Retention Agent
+**File:** `customer_retention_agent.py`  
+Reads `clients.csv`, flags clients not contacted in 30+ days, and uses Groq to draft a
+personalized re-engagement message for each one. Drafts are saved to `retention_messages.txt`.
+
+---
+
+### 14. Production Risk Agent
+**File:** `production_risk_agent.py`  
+Reads `production.csv`, flags batches running past their expected completion date, and uses
+Groq to draft an internal alert for the ops team on each one. Alerts are saved to
+`production_alerts.txt`.
+
+---
+
+### 15. Artisan Payment Agent
+**File:** `artisan_payment_agent.py`  
+Reads `artisans.csv`, finds artisans with an outstanding pending payment, and uses Groq to
+draft a short payment status message for each one. Drafts are saved to
+`artisan_payment_notices.txt`.
+
+---
+
+### 16. Daily Ops Digest Agent
+**File:** `daily_ops_digest_agent.py`  
+Ties together agents 12–15 into one morning digest: counts low stock items, overdue clients,
+delayed production batches, and pending artisan payments, then asks Groq for a short
+executive summary of what needs attention today. Saved to `daily_ops_digest.txt`.
+
+---
+
 ## Database
 
 **`rajasthan_business_db`** — MySQL database with 8 tables:
@@ -144,13 +182,18 @@ Real Indian business names. Used as foundation for all projects above.
 python-data-projects/
 ├── pandas_analysis.py
 ├── email_generator.py
-├── app.py                    # Flask API
+├── app.py                          # Flask API
 ├── fastapi_app.py
 ├── langchain_basics.py
 ├── langgraph_agent.py
 ├── autogen_agent.py
 ├── agrawal_report_agent.py
-├── churn_app.py              # Streamlit UI
+├── churn_app.py                    # Streamlit UI
+├── inventory_reorder_agent.py
+├── customer_retention_agent.py
+├── production_risk_agent.py
+├── artisan_payment_agent.py
+├── daily_ops_digest_agent.py
 ├── ml_models/
 │   ├── linear_regression.py
 │   ├── logistic_regression.py
