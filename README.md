@@ -179,6 +179,8 @@ Real Indian business names. Used as foundation for all projects above.
 ---
 
 ## Folder Structure
+
+```
 python-data-projects/
 ├── pandas_analysis.py
 ├── email_generator.py
@@ -205,6 +207,8 @@ python-data-projects/
 │   ├── inventory.csv
 │   └── clients.csv
 └── README.md
+```
+
 ---
 
 ## Setup
